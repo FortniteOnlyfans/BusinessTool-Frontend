@@ -14,7 +14,7 @@ function App() {
             width="100%"
         >
             <Stack spacing={2} alignItems="center">
-                <Typography variant="h4">Hello World</Typography>
+                <Typography variant="h4">Hello Main</Typography>
 
                 <Button
                     variant="outlined"
