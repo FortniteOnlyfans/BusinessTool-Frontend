@@ -3,7 +3,7 @@ import './App.css'
 import {Typography, Button, Box, Stack} from "@mui/material";
 
 function App() {
-    const [count, setCount] = useState(0)
+    const [count, setCount] = useState(1)
 
     return (
         <Box
@@ -14,7 +14,7 @@ function App() {
             width="100%"
         >
             <Stack spacing={2} alignItems="center">
-                <Typography variant="h4">Hello Test 2</Typography>
+                <Typography variant="h4">GET FREE VBUCKS!!!!</Typography>
 
                 <Button
                     variant="outlined"
