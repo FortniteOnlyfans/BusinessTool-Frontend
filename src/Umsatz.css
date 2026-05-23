@@ -1,0 +1,123 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #303030;
+}
+
+.menuBtn {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.menu-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1001;
+    padding: 10px 15px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    z-index: 999;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 280px;
+    height: 100vh;
+    background: white;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.2);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+}
+
+.sidebar.open {
+    transform: translateX(0);
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.close-button {
+    border: none;
+    background: none;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.nav {
+    padding: 10px;
+}
+
+.nav-item {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 5px;
+    border: none;
+    background: #303030;
+    text-align: left;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.submenu {
+    margin-left: 15px;
+    margin-bottom: 10px;
+}
+
+.submenu a {
+    display: block;
+    padding: 8px;
+    color: #333;
+    text-decoration: none;
+}
+
+.submenu a:hover {
+    background: #000000;
+}
+
+.content {
+    padding: 80px 20px;
+}
+
+.heading {
+    text-align: center;
+}
+
+#heading {
+    color: #ff848a;
+}
+
+.contact {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    text-align: right;
+}
+
+header {
+    background: #ffffff;
+}
+
+footer {
+    background: #ffffff;
+}

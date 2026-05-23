@@ -5,8 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3629fe81-be06-4967-9124-3845d9346997" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Umsatz.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Umsatz.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +47,7 @@
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
     &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Umsatz&quot;,
     &quot;javascript.preferred.runtime.type.id&quot;: &quot;node&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/v22ju/Desktop/coding/FNOF/BusinessTool-Frontend&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -75,7 +79,10 @@
       <workItem from="1779268435401" duration="5176000" />
       <workItem from="1779281344328" duration="306000" />
       <workItem from="1779282263988" duration="664000" />
-      <workItem from="1779453386333" duration="304000" />
+      <workItem from="1779453386333" duration="3768000" />
+      <workItem from="1779457176175" duration="199000" />
+      <workItem from="1779530935737" duration="283000" />
+      <workItem from="1779533190221" duration="5741000" />
     </task>
     <servers />
   </component>
