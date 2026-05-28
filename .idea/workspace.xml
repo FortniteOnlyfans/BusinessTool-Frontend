@@ -5,17 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3629fe81-be06-4967-9124-3845d9346997" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Umsatz.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Umsatz.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Umsatz/Umsatz.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Umsatz.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Umsatz/Umsatz.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Umsatz.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -59,6 +65,12 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="I:\Programmierung\BusinessTool\BusinessTool-Frontend\src\Login" />
+      <recent name="I:\Programmierung\BusinessTool\BusinessTool-Frontend\src\Umsatz" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -82,7 +94,11 @@
       <workItem from="1779453386333" duration="3768000" />
       <workItem from="1779457176175" duration="199000" />
       <workItem from="1779530935737" duration="283000" />
-      <workItem from="1779533190221" duration="5741000" />
+      <workItem from="1779533190221" duration="11486000" />
+      <workItem from="1779553764156" duration="2000" />
+      <workItem from="1779623414525" duration="3683000" />
+      <workItem from="1779800736481" duration="1287000" />
+      <workItem from="1779973145620" duration="5693000" />
     </task>
     <servers />
   </component>

@@ -1,7 +1,8 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #303030;
+    background: linear-gradient(to bottom, white, #df6363);
+    color: black;
 }
 
 .menuBtn {
@@ -16,8 +17,8 @@ body {
     left: 20px;
     z-index: 1001;
     padding: 10px 15px;
-    background: #2563eb;
-    color: white;
+    background: white;
+    color: #df6363;
     border: none;
     border-radius: 6px;
     cursor: pointer;
@@ -104,7 +105,7 @@ body {
 }
 
 #heading {
-    color: #ff848a;
+    color: #df6363;
 }
 
 .contact {
@@ -114,8 +115,92 @@ body {
     text-align: right;
 }
 
-header {
-    background: #ffffff;
+.spacer {
+    margin-top: 50px;
+}
+
+.page {
+    background: #d8d8d8;
+    border-radius: 40px;
+}
+
+.overview {
+    background: white;
+    border-radius: 40px;
+    padding: 35px;
+    border: 12px solid #d8d8d8;
+}
+
+.table,
+.summary-row {
+    display: grid;
+    grid-template-columns: 1.7fr repeat(4, 1fr);
+    gap: 20px;
+    align-items: center;
+    margin: 10px;
+}
+
+.header {
+    margin-bottom: 15px;
+}
+
+.row {
+    margin-bottom: 18px;
+}
+
+.name-column,
+.summary-label {
+    font-size: 22px;
+    color: #111;
+}
+
+.service {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background: #b51f49;
+    border-radius: 50%;
+}
+
+.year-column {
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.value-box {
+    background: #dddddd;
+    border-radius: 5px;
+    padding: 10px 14px;
+    font-size: 22px;
+    text-align: center;
+}
+
+.button-row {
+    display: flex;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.addBtn {
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 7px;
+    background: #5e5e5e;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.addBtn:hover {
+    opacity: 0.85;
 }
 
 footer {
