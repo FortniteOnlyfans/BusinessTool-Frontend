@@ -1,5 +1,5 @@
 import {useState} from 'react'
-import './Umsatz.css'
+import './Umsatz.module.css'
 
 
 function NavHead() {

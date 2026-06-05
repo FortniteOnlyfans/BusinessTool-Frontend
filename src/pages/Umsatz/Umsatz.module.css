@@ -142,6 +142,8 @@ body {
 
 .header {
     margin-bottom: 15px;
+    justify-content: center;
+    text-align: center;
 }
 
 .row {

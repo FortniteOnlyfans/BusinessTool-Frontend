@@ -1,11 +1,11 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import Umsatz from "./Umsatz/Umsatz.tsx";
+import "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
+import App from "./App";
+import "./index.css";
 
-
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <Umsatz />
-  </StrictMode>,
-)
+ReactDOM.createRoot(document.getElementById("root")).render(
+    <BrowserRouter>
+        <App />
+    </BrowserRouter>
+);

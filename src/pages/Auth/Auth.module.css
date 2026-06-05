@@ -1,0 +1,17 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #eeeeee;
+    color: black;
+}
+
+header {
+    background: #dadada;
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+}
+
+.register-container {
+    background: white;
+}
