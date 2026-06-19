@@ -5,11 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3629fe81-be06-4967-9124-3845d9346997" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/backend/Backend.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/menuX.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/menu/Menu.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/menu/Menu.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/menu/menuData.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/menu/pageData.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,10 +46,16 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "editor.preferences.completion.inline",
     "ts.external.directory.path": "/home/julian/coding/FNOF/BusinessTool/Frontend/BusinessTool-Frontend/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -63,7 +73,7 @@
       <updated>1778758498740</updated>
       <workItem from="1778758499757" duration="1364000" />
       <workItem from="1781449891053" duration="3012000" />
-      <workItem from="1781788485473" duration="523000" />
+      <workItem from="1781788485473" duration="6997000" />
     </task>
     <servers />
   </component>

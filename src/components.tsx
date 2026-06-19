@@ -1,5 +1,6 @@
 import "./App.css"
 import * as React from "react";
+import Menu from "./menu/Menu.tsx";
 
 export function PageBackground({upperColor, lowerColor, children}) {
     return (
@@ -11,14 +12,22 @@ export function PageBackground({upperColor, lowerColor, children}) {
     )
 }
 
-export function PageHeader({color, name}) {
+export function PageHeader({ color, name }) {
     return (
-        <div className="pageHeader"
-             style={{"--color": color} as React.CSSProperties}
-        >
-            {name}
+        <div className="pageHeader" style={{ "--color": color } as React.CSSProperties}>
+            <div className="header-left">
+                <Menu color={color}/>
+            </div>
+
+            <div className="header-title">
+                {name}
+            </div>
+
+            <div className="header-right">
+                <button>Right</button>
+            </div>
         </div>
-    )
+    );
 }
 
 export function GreyBackground({children}) {

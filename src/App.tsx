@@ -1,12 +1,15 @@
 import './App.css'
 import './components.tsx'
-import {GreyBackground, PageHeader, PageBackground, WhiteBackground, Dot, Info} from "./components.tsx"
+import {Dot, GreyBackground, Info, PageBackground, PageHeader, WhiteBackground} from "./components.tsx"
+import {useState} from "react";
 
 function App() {
 
-    const lowerColor="#bf3f60"
-    const upperColor="#e7d2d8"
-    const name="Umsatz"
+
+    const [upperColor, setUpperColor] = useState("#e7d2d8");
+    const [lowerColor, setLowerColor] = useState("#bf3f60");
+
+    const [name, setName] = useState("Umsatz");
 
     return (
         <>
