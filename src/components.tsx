@@ -12,11 +12,11 @@ export function PageBackground({upperColor, lowerColor, children}) {
     )
 }
 
-export function PageHeader({ color, name }) {
+export function PageHeader({ color, name, setPage }) {
     return (
         <div className="pageHeader" style={{ "--color": color } as React.CSSProperties}>
             <div className="header-left">
-                <Menu color={color}/>
+                <Menu color={color} setPage={setPage}/>
             </div>
 
             <div className="header-title">

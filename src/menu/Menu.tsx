@@ -2,13 +2,13 @@ import {type CSSProperties, useState} from "react";
 import "./Menu.css";
 import {menuData} from "./menuData.tsx";
 
-export default function Menu({color}) {
+export default function Menu({color, setPage}) {
     const [open, setOpen] = useState(false);
 
     return <>
         <>
             {!open && <MenuButton onClick={() => setOpen(true)} color={color}/>}
-            {open && <MenuItems color={color} setOpen={setOpen} />}
+            {open && <MenuItems color={color} setOpen={setOpen} setPage={setPage} />}
         </>
     </>;
 }
@@ -26,7 +26,7 @@ function MenuButton({onClick, color}) {
     </>;
 }
 
-function MenuItems({color, setOpen}) {
+function MenuItems({color, setOpen, setPage}) {
     const [menuLevel, setMenuLevel] = useState("$");
 
     const items = menuData[menuLevel];
@@ -36,7 +36,7 @@ function MenuItems({color, setOpen}) {
             setMenuLevel(item[0]);
         } else {
             const id = item[0];
-            console.log("Selected leaf:", id);
+            setPage(id);
             setOpen(false);
         }
     }
