@@ -1,6 +1,15 @@
 import './App.css'
 import './components.tsx'
-import {GreyBackground, PageHeader, PageBackground, WhiteBackground, Dot, Info} from "./components.tsx"
+import {
+    GreyBackground,
+    PageHeader,
+    PageBackground,
+    WhiteBackground,
+    Dot,
+    Info,
+    InputNormal,
+    InputHighlight
+} from "./components.tsx"
 
 function App() {
 
@@ -17,16 +26,16 @@ function App() {
                         <table>
                             <thead>
                             <tr>
-                                <th>Abopreis</th>
-                                <th>Nutzeranzahl</th>
-                                <th>Premiumnutzer</th>
+                                <th className="p1">Abopreis</th>
+                                <th className="p1">Nutzeranzahl</th>
+                                <th className="p1">Premiumnutzer</th>
                             </tr>
                             </thead>
                             <tbody>
                             <tr>
-                                <td>6€</td>
-                                <td>100 000</td>
-                                <td>20 000</td>
+                                <td className="p0">6€</td>
+                                <td className="p0">100 000</td>
+                                <td className="p0">20 000</td>
                             </tr>
                             </tbody>
                         </table>
@@ -36,22 +45,39 @@ function App() {
                             <tbody>
                             <tr>
                                 <td><Dot color={lowerColor}/></td>
-                                <td>Umsatz</td>
-                                <td>120 000€</td>
+                                <td className="p0">Umsatz</td>
+                                <td className="p0">120 000€</td>
                             </tr>
                             <tr>
                                 <td><Dot color={lowerColor}/></td>
-                                <td>Umsatz</td>
-                                <td>120 000€</td>
+                                <td className="p0">Kosten</td>
+                                <td className="p0">100 000€</td>
                             </tr>
                             <tr>
                                 <td><Dot color={lowerColor}/></td>
-                                <td>Umsatz</td>
-                                <td>120 000€</td>
+                                <td className="p0">Rohgewinn</td>
+                                <td className="p0">16,67%   20 000€</td>
                             </tr>
                             </tbody>
                         </table>
                         <Info color={lowerColor}/>
+                    </WhiteBackground>
+                    <WhiteBackground>
+                        <div>
+                            <Dot color={lowerColor}/>
+                            <Dot color={lowerColor}/>
+                            <Dot color={lowerColor}/>
+                        </div>
+                        <div>
+                            <label className="p0">Umsatz</label>
+                            <label className="p0">Kosten</label>
+                            <label className="p0">Rohgewinn</label>
+                        </div>
+                        <div>
+                            <InputNormal content={"120 000€"}/>
+                            <InputNormal content={"100 000€"}/>
+                            <InputHighlight content={"16,67%     20 000€"} color={lowerColor}/>
+                        </div>
                     </WhiteBackground>
                 </GreyBackground>
             </PageBackground>

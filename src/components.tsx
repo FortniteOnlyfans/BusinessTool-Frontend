@@ -11,12 +11,18 @@ export function PageBackground({upperColor, lowerColor, children}) {
     )
 }
 
-export function PageHeader({color, name}) {
+export function PageHeader({color, name, projectname, imgName}) {
     return (
         <div className="pageHeader"
              style={{"--color": color} as React.CSSProperties}
         >
-            {name}
+            <label
+                style={{"--color": color} as React.CSSProperties}
+                id="navBtn"
+            >☰</label>
+            <label id="projectname">{projectname}</label>
+            <label>{name}</label>
+            <img id="saveImg" src={imgName} alt="Speichern" />
         </div>
     )
 }
@@ -37,22 +43,22 @@ export function WhiteBackground({children}) {
     )
 }
 
-export function InputHighlight({color, children}) {
+export function InputHighlight({color}) {
     return (
         <input
             style={{"--color": color} as React.CSSProperties}
             className="inputHighlight"
-        >
-            {children}
-        </input>
+            min={0}
+        ></input>
     )
 }
 
-export function InputNormal({children}) {
+export function InputNormal() {
     return (
-        <input className="inputNormal">
-            {children}
-        </input>
+        <input
+            className="inputNormal"
+            min={0}
+        ></input>
     )
 }
 
