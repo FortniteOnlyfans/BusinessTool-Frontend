@@ -4,6 +4,7 @@ import {Dot, GreyBackground, Info, PageBackground, PageHeader, WhiteBackground} 
 import {useEffect, useState} from "react";
 import {initStates} from "./menu/PageManager.tsx";
 import {setPage} from "./menu/PageManager.tsx";
+import Privat from "./pages/privatentnahmen.tsx";
 
 function App() {
     const [upperColor, setUpperColor] = useState("#e7d2d8");
@@ -19,46 +20,7 @@ function App() {
             <PageHeader color={lowerColor} name={name} setPage={p => setPage(p)} />
             <PageBackground lowerColor={lowerColor} upperColor={upperColor} >
                 <GreyBackground>
-                    <WhiteBackground>
-                        <table>
-                            <thead>
-                            <tr>
-                                <th>Abopreis</th>
-                                <th>Nutzeranzahl</th>
-                                <th>Premiumnutzer</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>6€</td>
-                                <td>100 000</td>
-                                <td>20 000</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </WhiteBackground>
-                    <WhiteBackground>
-                        <table>
-                            <tbody>
-                            <tr>
-                                <td><Dot color={lowerColor}/></td>
-                                <td>Umsatz</td>
-                                <td>120 000€</td>
-                            </tr>
-                            <tr>
-                                <td><Dot color={lowerColor}/></td>
-                                <td>Umsatz</td>
-                                <td>120 000€</td>
-                            </tr>
-                            <tr>
-                                <td><Dot color={lowerColor}/></td>
-                                <td>Umsatz</td>
-                                <td>120 000€</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                        <Info color={lowerColor}/>
-                    </WhiteBackground>
+                   <Privat color={lowerColor}/>
                 </GreyBackground>
             </PageBackground>
         </>
