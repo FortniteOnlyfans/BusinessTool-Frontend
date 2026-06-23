@@ -1,0 +1,23 @@
+Umsatz
+    lowerColor="#bf3f60"
+    upperColor="#e7d2d8"
+
+Liquidität
+    upperColor="#e7e2e7"
+    lowerColor="#9f739f"
+
+RENTABILITÄT
+    upperColor="#eae3d1"
+    lowerColor="#dbc487"
+
+Kosten
+    upperColor="#e5eae3"
+    lowerColor="#a6c59d"
+
+PRIVATENTNAHME
+    upperColor="#e0e9ee"
+    lowerColor="#8ac3df"
+
+KAPITALBEDARF & FINANZIERUNG
+    upperColor="#f4e3da"
+    lowerColor="#e9a77e"
