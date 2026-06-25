@@ -7,7 +7,10 @@ let setLowerColor;
 let setName;
 let setInner;
 
-export let PROJ_ID = 11;
+export const PROJ_STATE = {
+    currentId: 11,
+    currentVersionId: null as number | null
+};
 
 export function initStates(stateColorUpper, stateColorLower, stateName, stateInner) {
     setUpperColor = stateColorUpper;

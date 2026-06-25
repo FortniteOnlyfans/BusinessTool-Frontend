@@ -3,6 +3,8 @@ import './components.tsx'
 import {GreyBackground, PageBackground, PageHeader} from "./components.tsx"
 import {CSSProperties, useEffect, useState} from "react";
 import {initStates, setPage} from "./menu/PageManager.tsx";
+import Login from "./Auth/Login.tsx";
+import Register from "./Auth/Register.tsx";
 
 interface InnerProps {
     color: CSSProperties

@@ -1,8 +1,10 @@
 import {error, success} from "./../AppPopup.tsx";
 
-export default function(res: object) {
+export default function(res: object, showSuccess = true) {
     if (res.status === "success") {
-        success("Erfolgreich!");
+        if (showSuccess) {
+            success("Erfolgreich!");
+        }
     } else if (res.status === "expired") {
         //TODO: redirect zur login seite
         alert("Neu anmelden");

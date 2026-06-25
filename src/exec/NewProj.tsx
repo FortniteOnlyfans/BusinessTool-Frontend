@@ -1,5 +1,6 @@
 import {POST} from "../backend/Backend.tsx";
-import HandleStatus from "./HandleStatus.ts";
+import HandleStatus from "./HandleStatus.tsx";
+import {PROJ_STATE} from "../menu/PageManager.tsx";
 
 export default async function() {
     const name = prompt("Name?");
@@ -12,4 +13,8 @@ export default async function() {
     });
 
     HandleStatus(res);
+
+    if (res.payload) {
+        PROJ_STATE.currentId = Number(res.payload.projId);
+    }
 }

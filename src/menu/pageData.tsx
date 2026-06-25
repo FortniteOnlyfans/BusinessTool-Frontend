@@ -1,8 +1,9 @@
 import Ums from "../pages/Ums.tsx";
 import Liq from "../pages/Liq.tsx";
 import NewProj from "../exec/NewProj.tsx";
-import DelProj from "../exec/DelProj.ts";
+import DelProj from "../exec/DelProj.tsx";
 import OpenProj from "../exec/OpenProj.tsx";
+import OpenProjVersion from "../exec/OpenProjVer.tsx";
 
 export const pageData = {
     dash: {
@@ -54,7 +55,8 @@ export const pageData = {
     },
 
     openver: {
-        name: "Projektversion öffnen"
+        name: "Projektversion öffnen",
+        exec: OpenProjVersion
     },
 
     openproj: {
