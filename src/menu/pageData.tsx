@@ -1,3 +1,10 @@
+import Ums from "../pages/Ums.tsx";
+import Liq from "../pages/Liq.tsx";
+import NewProj from "../exec/NewProj.tsx";
+import DelProj from "../exec/DelProj.tsx";
+import OpenProj from "../exec/OpenProj.tsx";
+import OpenProjVersion from "../exec/OpenProjVer.tsx";
+
 export const pageData = {
     dash: {
         name: "Dashboard"
@@ -12,7 +19,8 @@ export const pageData = {
     ums: {
         lowerColor: "#bf3f60",
         upperColor: "#e7d2d8",
-        name: "Umsatz"
+        name: "Umsatz",
+        page: Ums
     },
 
     kapfin: {
@@ -24,7 +32,8 @@ export const pageData = {
     liq: {
         lowerColor: "#9f739f",
         upperColor: "#e7e2e7",
-        name: "Liquidität"
+        name: "Liquidität",
+        page: Liq
     },
 
     rent: {
@@ -46,18 +55,22 @@ export const pageData = {
     },
 
     openver: {
-        name: "Projektversion öffnen"
+        name: "Projektversion öffnen",
+        exec: OpenProjVersion
     },
 
     openproj: {
-        name: "Projekt öffnen"
+        name: "Projekt öffnen",
+        exec: OpenProj
     },
 
     newproj: {
-        name: "Neues Projekt"
+        name: "Neues Projekt",
+        exec: NewProj
     },
 
     delproj: {
-        name: "Lösche Projekt"
+        name: "Lösche Projekt",
+        exec: DelProj
     }
 }

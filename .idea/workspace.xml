@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3629fe81-be06-4967-9124-3845d9346997" name="Changes" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
@@ -13,6 +14,21 @@
       <change beforePath="$PROJECT_DIR$/src/components.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Umsatz.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Umsatz.tsx" afterDir="false" />
+=======
+<<<<<<< Updated upstream
+      <change afterPath="$PROJECT_DIR$/src/menu/PageManager.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/menu/Menu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/menu/Menu.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/menu/pageData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/menu/pageData.tsx" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+>>>>>>> Stashed changes
+>>>>>>> origin/menu
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +46,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+<<<<<<< HEAD
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
     &quot;state&quot;: &quot;OPEN&quot;,
@@ -42,6 +59,8 @@
     &quot;accountId&quot;: &quot;0e2511dc-d988-4229-ba99-253701c06283&quot;
   }
 }</component>
+=======
+>>>>>>> origin/menu
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -50,6 +69,10 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+<<<<<<< HEAD
+=======
+<<<<<<< Updated upstream
+>>>>>>> origin/menu
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
@@ -57,23 +80,53 @@
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
     &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+<<<<<<< HEAD
     &quot;git-widget-placeholder&quot;: &quot;components&quot;,
     &quot;javascript.preferred.runtime.type.id&quot;: &quot;node&quot;,
     &quot;last_opened_file_path&quot;: &quot;I:/Programmierung/BusinessTool/BusinessTool-Frontend&quot;,
+=======
+    &quot;git-widget-placeholder&quot;: &quot;menu&quot;,
+    &quot;javascript.preferred.runtime.type.id&quot;: &quot;node&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/julian/coding/FNOF/BusinessTool/Frontend/BusinessTool-Frontend&quot;,
+>>>>>>> origin/menu
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+<<<<<<< HEAD
     &quot;ts.external.directory.path&quot;: &quot;I:\\Programmierung\\BusinessTool\\BusinessTool-Frontend\\node_modules\\typescript\\lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+=======
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.completion.inline&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/home/julian/coding/FNOF/BusinessTool/Frontend/BusinessTool-Frontend/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+=======
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/v22ju/Desktop/coding/FNOF/BusinessTool-Frontend",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "C:\\Users\\v22ju\\Desktop\\coding\\FNOF\\BusinessTool-Frontend\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
+>>>>>>> Stashed changes
+>>>>>>> origin/menu
   }
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+<<<<<<< HEAD
       <recent name="I:\Programmierung\BusinessTool\BusinessTool-Frontend\src\images" />
       <recent name="I:\Programmierung\BusinessTool\BusinessTool-Frontend\src" />
       <recent name="I:\Programmierung\BusinessTool\BusinessTool-Frontend\src\backend" />
+=======
+      <recent name="$PROJECT_DIR$/public" />
+>>>>>>> origin/menu
     </key>
   </component>
   <component name="SharedIndexes">
@@ -92,6 +145,7 @@
       <option name="presentableId" value="Default" />
       <updated>1778758498740</updated>
       <workItem from="1778758499757" duration="1364000" />
+<<<<<<< HEAD
       <workItem from="1781369221826" duration="3474000" />
       <workItem from="1781699030443" duration="8472000" />
       <workItem from="1781788470936" duration="4110000" />
@@ -99,6 +153,11 @@
       <workItem from="1782219406283" duration="1345000" />
       <workItem from="1782301123739" duration="11900000" />
       <workItem from="1782388693083" duration="469000" />
+=======
+      <workItem from="1781449891053" duration="3012000" />
+      <workItem from="1781788485473" duration="7734000" />
+      <workItem from="1782112537636" duration="976000" />
+>>>>>>> origin/menu
     </task>
     <servers />
   </component>

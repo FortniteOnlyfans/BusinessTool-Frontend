@@ -16,6 +16,25 @@
 .pageHeader {
     background-color: #ffffff;
     color: var(--color);
+    padding: 0 20px;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.header-title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
     font-size: 40px;
     font-weight: 500;
     display: flex;

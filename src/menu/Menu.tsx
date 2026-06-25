@@ -62,6 +62,6 @@ function MenuItems({color, setOpen, setPage}) {
 
 function MenuX({onClick}) {
     return <>
-        <img src="src/images/menuX.svg" alt="Close Menu" onClick={onClick}/>
+        <img src="/menuX.svg" alt="Close Menu" onClick={onClick}/>
     </>;
 }
