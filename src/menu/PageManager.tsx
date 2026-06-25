@@ -5,19 +5,29 @@ let currentPageId = "ums";
 let setUpperColor;
 let setLowerColor;
 let setName;
+let setInner;
 
-export function initStates(stateColorUpper, stateColorLower, stateName) {
+export let PROJ_ID = 11;
+
+export function initStates(stateColorUpper, stateColorLower, stateName, stateInner) {
     setUpperColor = stateColorUpper;
     setLowerColor = stateColorLower;
     setName = stateName;
+    setInner = stateInner;
     setPage(currentPageId);
 }
 
 export function setPage(pageId) {
-    currentPageId = pageId;
     const pageObj = pageData[pageId];
-    console.log(pageId, pageObj);
-    setUpperColor(pageObj.upperColor);
-    setLowerColor(pageObj.lowerColor);
-    setName(pageObj.name);
+    if (pageObj.page) {
+        currentPageId = pageId;
+        setUpperColor(pageObj.upperColor);
+        setLowerColor(pageObj.lowerColor);
+        setName(pageObj.name);
+        const p = pageObj.page;
+        setInner(() => p);
+    }
+    if (pageObj.exec) {
+        pageObj.exec();
+    }
 }
