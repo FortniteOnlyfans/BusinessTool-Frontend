@@ -48,24 +48,23 @@
 }
 
 .greyBackground {
-    background-color: #eeeeee;
-    border: 40px;
+    width: 88%;
+    margin: 40px auto;
+    padding: 40px;
     border-radius: 40px;
+    background: #e6e6e6;
+
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
     flex-direction: column;
-    min-width: 35%;
+    gap: 30px;
 }
 
 .whiteBackground {
     background-color: #ffffff;
     border-radius: 40px;
-    width: 90%;
-    height: 90%;
-    margin: 10px;
-    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 30px;
 }
 
 .inputHighlight {
