@@ -11,7 +11,7 @@ export function PageBackground({upperColor, lowerColor, children}) {
     )
 }
 
-export function PageHeader({color, name, projectname, imgName}) {
+export function PageHeader({color, name, projectname, imgName, children}) {
     return (
         <div className="pageHeader"
              style={{"--color": color} as React.CSSProperties}
@@ -19,7 +19,7 @@ export function PageHeader({color, name, projectname, imgName}) {
             <label
                 style={{"--color": color} as React.CSSProperties}
                 id="navBtn"
-            >☰</label>
+            >{children}</label>
             <label id="projectname">{projectname}</label>
             <label>{name}</label>
             <img id="saveImg" src={imgName} alt="Speichern" />
@@ -27,9 +27,12 @@ export function PageHeader({color, name, projectname, imgName}) {
     )
 }
 
-export function GreyBackground({children}) {
+export function GreyBackground({children, direction}) {
     return (
-        <div className="greyBackground">
+        <div
+            style={{"--direction": direction} as React.CSSProperties}
+            className="greyBackground"
+        >
             {children}
         </div>
     )
@@ -59,6 +62,27 @@ export function InputNormal() {
             className="inputNormal"
             min={0}
         ></input>
+    )
+}
+
+export function SumHighlight({color, children}) {
+    return (
+        <label
+            style={{"--color": color} as React.CSSProperties}
+            className="inputHighlight"
+        >
+            {children}
+        </label>
+    )
+}
+
+export function SumNormal({children}) {
+    return (
+        <label
+            className="inputNormal"
+        >
+            {children}
+        </label>
     )
 }
 

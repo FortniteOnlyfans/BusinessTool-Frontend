@@ -1,88 +1,69 @@
-import './App.css'
-import './components.tsx'
+import "./App.css"
 import {
-    GreyBackground,
-    PageHeader,
-    PageBackground,
-    WhiteBackground,
     Dot,
-    Info,
+    GreyBackground,
     InputNormal,
-    InputHighlight
-} from "./components.tsx"
+    PageBackground,
+    PageHeader,
+    SumNormal,
+    WhiteBackground
+} from "./components.tsx";
+import Menu from "./menu/Menu.tsx";
 
-function App() {
 
-    const lowerColor="#bf3f60"
-    const upperColor="#e7d2d8"
-    const name="Umsatz"
+export default function Umsatz() {
+    const lowerColor = "#bf3f60"
+    const upperColor = "#e7d2d8"
+    const name = "Umsatz"
+    const projectname = "Probeunternehmen"
 
     return (
         <>
-            <PageHeader color={lowerColor} name={name} />
-            <PageBackground lowerColor={lowerColor} upperColor={upperColor} >
+            <PageHeader color={lowerColor} name={name} projectname={projectname} imgName={"src/images/Umsatz.png"}>
+                <Menu color={lowerColor} setPage={"ums"}/>
+            </PageHeader>
+            <PageBackground lowerColor={lowerColor} upperColor={upperColor}>
                 <GreyBackground>
                     <WhiteBackground>
-                        <table>
-                            <thead>
-                            <tr>
-                                <th className="p1">Abopreis</th>
-                                <th className="p1">Nutzeranzahl</th>
-                                <th className="p1">Premiumnutzer</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td className="p0">6€</td>
-                                <td className="p0">100 000</td>
-                                <td className="p0">20 000</td>
-                            </tr>
-                            </tbody>
-                        </table>
+                        <div id="umsatzUpper">
+                            <div id="umsatzUpperInner">
+                                <label>Abopreis in € (Monat)</label>
+                                <InputNormal/>
+                            </div>
+                            <div id="umsatzUpperInner">
+                                <label>Nutzeranzahl</label>
+                                <InputNormal/>
+                            </div>
+                            <div id="umsatzUpperInner">
+                                <label>Premium Nutzer</label>
+                                <InputNormal/>
+                            </div>
+                        </div>
                     </WhiteBackground>
                     <WhiteBackground>
-                        <table>
-                            <tbody>
-                            <tr>
-                                <td><Dot color={lowerColor}/></td>
-                                <td className="p0">Umsatz</td>
-                                <td className="p0">120 000€</td>
-                            </tr>
-                            <tr>
-                                <td><Dot color={lowerColor}/></td>
-                                <td className="p0">Kosten</td>
-                                <td className="p0">100 000€</td>
-                            </tr>
-                            <tr>
-                                <td><Dot color={lowerColor}/></td>
-                                <td className="p0">Rohgewinn</td>
-                                <td className="p0">16,67%   20 000€</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                        <Info color={lowerColor}/>
-                    </WhiteBackground>
-                    <WhiteBackground>
-                        <div>
-                            <Dot color={lowerColor}/>
-                            <Dot color={lowerColor}/>
-                            <Dot color={lowerColor}/>
-                        </div>
-                        <div>
-                            <label className="p0">Umsatz</label>
-                            <label className="p0">Kosten</label>
-                            <label className="p0">Rohgewinn</label>
-                        </div>
-                        <div>
-                            <InputNormal content={"120 000€"}/>
-                            <InputNormal content={"100 000€"}/>
-                            <InputHighlight content={"16,67%     20 000€"} color={lowerColor}/>
+                        <div id="umsatzLower">
+                            <div id="umsatzLowerInner">
+                                <div id="dottedItem"><Dot color={lowerColor}/>
+                                    <label>Umsatz</label>
+                                </div>
+                                <InputNormal/>
+                            </div>
+                            <div id="umsatzLowerInner">
+                                <div id="dottedItem"><Dot color={lowerColor}/>
+                                    <label>Kosten</label>
+                                </div>
+                                <SumNormal>1200 €</SumNormal>
+                            </div>
+                            <div id="umsatzLowerInner">
+                                <div id="dottedItem"><Dot color={lowerColor}/>
+                                    <label>Rohgewinn</label>
+                                </div>
+                                <InputNormal/>
+                            </div>
                         </div>
                     </WhiteBackground>
                 </GreyBackground>
             </PageBackground>
         </>
-    )
-}
-
-export default App
+    );
+};
