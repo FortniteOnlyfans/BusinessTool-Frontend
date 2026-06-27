@@ -1,4 +1,5 @@
 import { useState } from "react";
+import {LOGIN} from "../backend/Backend.tsx";
 
 export default function Login() {
     const [username, setUsername] = useState("");
@@ -22,9 +23,10 @@ export default function Login() {
             const data = await response.json();
 
             if (response.ok) {
-                alert("Auth erfolgreich!");
-
-                console.log(data);
+                const tkn = response.headers.get("Authorization");
+                if (tkn) {
+                    LOGIN(tkn);
+                }
 
                 // Beispiel:
                 // localStorage.setItem("token", data.token);

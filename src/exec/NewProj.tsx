@@ -18,3 +18,11 @@ export default async function() {
         PROJ_STATE.currentId = Number(res.payload.projId);
     }
 }
+
+export function NewProjModal({color}) {
+
+
+    return <>
+
+    </>;
+}

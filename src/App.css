@@ -25,6 +25,20 @@
     padding: 0 20px;
 }
 
+.header-meta {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.header-meta > p:first-child:after {
+    content: ' -';
+}
+
+.header-meta > p {
+    margin-inline: 2px;
+}
+
 .header-left {
     display: flex;
     align-items: center;

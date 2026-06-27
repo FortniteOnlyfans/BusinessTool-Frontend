@@ -6,8 +6,8 @@ export default function(res: object, showSuccess = true) {
             success("Erfolgreich!");
         }
     } else if (res.status === "expired") {
-        //TODO: redirect zur login seite
-        alert("Neu anmelden");
+        error("Sie sind nicht angemeldet - Bitte anmelden!")
+        window.location.href = "/login";
     } else if (res.status === "fail") {
         error(res.reason);
     }

@@ -3,8 +3,7 @@ import './components.tsx'
 import {GreyBackground, PageBackground, PageHeader} from "./components.tsx"
 import {CSSProperties, useEffect, useState} from "react";
 import {initStates, setPage} from "./menu/PageManager.tsx";
-import Login from "./Auth/Login.tsx";
-import Register from "./Auth/Register.tsx";
+import {GlobalModalContainer} from "./Modal.tsx";
 
 interface InnerProps {
     color: CSSProperties
@@ -28,6 +27,7 @@ function App() {
                     {Inner ? <Inner color={lowerColor}/> : <div/>}
                 </GreyBackground>
             </PageBackground>
+            <GlobalModalContainer/>
         </>
     )
 }

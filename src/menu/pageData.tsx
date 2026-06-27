@@ -4,6 +4,7 @@ import NewProj from "../exec/NewProj.tsx";
 import DelProj from "../exec/DelProj.tsx";
 import OpenProj from "../exec/OpenProj.tsx";
 import OpenProjVersion from "../exec/OpenProjVer.tsx";
+import Logout from "../exec/Logout.tsx";
 
 export const pageData = {
     dash: {
@@ -72,5 +73,10 @@ export const pageData = {
     delproj: {
         name: "Lösche Projekt",
         exec: DelProj
+    },
+
+    logout: {
+        name: "Ablemden",
+        exec: Logout
     }
 }
