@@ -1,4 +1,3 @@
-import Ums from "../pages/Ums.tsx";
 import Liq from "../pages/Liq.tsx";
 import NewProj from "../exec/NewProj.tsx";
 import DelProj from "../exec/DelProj.tsx";
@@ -6,10 +5,14 @@ import OpenProj from "../exec/OpenProj.tsx";
 import OpenProjVersion from "../exec/OpenProjVer.tsx";
 import Kosten from "../pages/Kosten.tsx";
 import Umsatz from "../pages/Umsatz.tsx";
+import Dashboard from "../pages/Dashboard.tsx";
 
 export const pageData = {
     dash: {
-        name: "Dashboard"
+        lowerColor: "#525252",
+        upperColor: "#525252",
+        name: "Dashboard",
+        page: Dashboard
     },
 
     kost: {

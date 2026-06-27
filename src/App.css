@@ -116,6 +116,7 @@
     padding: 10px;
     flex-direction: var(--direction);
     min-width: 35%;
+    max-width: 85%;
     height: fit-content;
 }
 
