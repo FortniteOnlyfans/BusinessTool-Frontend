@@ -4,7 +4,8 @@ import NewProj from "../exec/NewProj.tsx";
 import DelProj from "../exec/DelProj.tsx";
 import OpenProj from "../exec/OpenProj.tsx";
 import OpenProjVersion from "../exec/OpenProjVer.tsx";
-import Logout from "../exec/Logout.tsx";
+import Kosten from "../pages/Kosten.tsx";
+import Umsatz from "../pages/Umsatz.tsx";
 
 export const pageData = {
     dash: {
@@ -14,14 +15,15 @@ export const pageData = {
     kost: {
         lowerColor: "#a6c59d",
         upperColor: "#e5eae3",
-        name: "Kosten"
+        name: "Kosten",
+        page: Kosten
     },
 
     ums: {
         lowerColor: "#bf3f60",
         upperColor: "#e7d2d8",
         name: "Umsatz",
-        page: Ums
+        page: Umsatz
     },
 
     kapfin: {

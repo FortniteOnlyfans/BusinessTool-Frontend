@@ -1,5 +1,5 @@
 import { useState } from "react";
-import {LOGIN} from "../backend/Backend.tsx";
+import "./Auth.css"
 
 export default function Login() {
     const [username, setUsername] = useState("");
@@ -22,15 +22,7 @@ export default function Login() {
 
             const data = await response.json();
 
-            if (response.ok) {
-                const tkn = response.headers.get("Authorization");
-                if (tkn) {
-                    LOGIN(tkn);
-                }
-
-                // Beispiel:
-                // localStorage.setItem("token", data.token);
-            } else {
+            if (data.status !== "success") {
                 alert(data.message);
             }
 
@@ -41,28 +33,51 @@ export default function Login() {
     }
 
     return (
-        <div>
-            <h1>Login</h1>
+        <>
+            <div className="auth-header">
+                <img src="src/images/logo.png" alt="logo" />
+            </div>
+            <div className="auth-container">
+                <div className="auth-card">
+                    <div className="auth-left">
 
-            <form onSubmit={handleLogin}>
-                <input
-                    type="username"
-                    placeholder="Benutzername"
-                    value={username}
-                    onChange={(e) => setUsername(e.target.value)}
-                />
+                        <p id="heading">Anmeldung</p>
 
-                <input
-                    type="password"
-                    placeholder="Passwort"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                />
+                        <p id="text">Willkommen zurück!</p>
 
-                <button type="submit">
-                    Einloggen
-                </button>
-            </form>
-        </div>
+                        <form
+                            className="auth-form"
+                            onSubmit={handleLogin}
+                        >
+                            <input
+                                type="username"
+                                placeholder="Benutzername"
+                                value={username}
+                                onChange={(e) => setUsername(e.target.value)}/>
+
+                            <span id="spacer"></span>
+
+                            <input
+                                type="password"
+                                placeholder="Passwort"
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)}/>
+
+                            <button type="submit">
+                                Anmelden
+                            </button>
+                        </form>
+                        <p>Noch kein Konto?
+                            <span id="rainbow-text">Registrieren</span>
+                        </p>
+                    </div>
+                    <div className="auth-image">
+                        <img
+                            src="src/images/authImage.png"
+                            alt="aesthetic"/>
+                    </div>
+                </div>
+            </div>
+        </>
     );
 }

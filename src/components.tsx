@@ -52,9 +52,12 @@ export function PageHeader({ color, name, setPage }) {
     );
 }
 
-export function GreyBackground({children}) {
+export function GreyBackground({children, direction}) {
     return (
-        <div className="greyBackground">
+        <div
+            style={{"--direction": direction} as React.CSSProperties}
+            className="greyBackground"
+        >
             {children}
         </div>
     )
@@ -68,22 +71,43 @@ export function WhiteBackground({children}) {
     )
 }
 
-export function InputHighlight({color, children}) {
+export function InputHighlight({color}) {
     return (
         <input
             style={{"--color": color} as React.CSSProperties}
             className="inputHighlight"
-        >
-            {children}
-        </input>
+            min={0}
+        ></input>
     )
 }
 
-export function InputNormal({children}) {
+export function InputNormal() {
     return (
-        <input className="inputNormal">
+        <input
+            className="inputNormal"
+            min={0}
+        ></input>
+    )
+}
+
+export function SumHighlight({color, children}) {
+    return (
+        <label
+            style={{"--color": color} as React.CSSProperties}
+            className="inputHighlight"
+        >
             {children}
-        </input>
+        </label>
+    )
+}
+
+export function SumNormal({children}) {
+    return (
+        <label
+            className="inputNormal"
+        >
+            {children}
+        </label>
     )
 }
 

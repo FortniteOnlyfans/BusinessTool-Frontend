@@ -9,6 +9,7 @@
     padding-top: 5%;
     padding-bottom: 10%;
     margin: 0;
+    border: none;
 }
 
 .pageHeader {
@@ -18,6 +19,7 @@
     height: 77px;
 
     display: flex;
+    justify-content: center;
     align-items: center;
 
     background: #fff;
@@ -57,8 +59,65 @@
 
     font-size: 40px;
     font-weight: 500;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-between;
+    height: 77px;
+    padding: 25px 20px;
+    margin: 0;
+}
 
-    white-space: nowrap;
+#navBtn {
+    color: var(--color);
+    font-weight: bold;
+}
+
+.menu-btn {
+    cursor: pointer;
+}
+
+.menu-items {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    background-color: #fff;
+    width: 400px;
+    height: 100vh;
+
+    box-shadow: 4px 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.menu-item {
+    position: relative;
+    height: 39px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    cursor: pointer;
+    color: black;
+}
+
+.menu-item:first-child {
+    background-color: var(--color);
+    height: 97px;
+}
+
+#projectname {
+    font-weight: normal;
+    font-size: 24px;
+    color: #525252;
+    position: absolute;
+    left: 150px; top: 40px;
+}
+
+#saveImg {
+    height: 50px;
+    width: 50px;
+}
+#saveImg:hover {
+    cursor: pointer;
 }
 
 .greyBackground {
@@ -69,27 +128,51 @@
     justify-content: center;
     align-items: center;
     padding: 10px;
-    flex-direction: column;
+    flex-direction: var(--direction);
     min-width: 35%;
+    height: fit-content;
 }
 
 .whiteBackground {
     background-color: #ffffff;
     border-radius: 40px;
     width: 90%;
-    height: 90%;
+    height: fit-content;
     margin: 10px;
-    padding: 10px;
+    padding: 20px;
 }
 
 .inputHighlight {
     font-weight: bold;
     background-color: var(--color);
+    border-radius: 5px;
+    border: none;
+    margin: 10px;
+    min-width: 200px;
+}
+
+.inputNormal {
+    font-weight: bold;
+    background-color: #eeeeee;
+    border-radius: 5px;
+    border: none;
+    margin: 10px;
+    min-width: 200px;
 }
 
 .addBtn {
     background-color: #dadada;
     color: #000000;
+    font-weight: bold;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+    width: 30px;
+    margin: 15px;
+}
+.addBtn:hover {
+    cursor: pointer;
 }
 
 .dot {
@@ -97,6 +180,7 @@
     width: 10px;
     height: 10px;
     border-radius: 50%;
+    margin-right: 10px;
 }
 
 .info {
@@ -117,6 +201,127 @@
     font-size: 35px;
     color: var(--color);
 }
+
+
+#umsatzUpper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+
+#umsatzUpperInner {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+#umsatzLower {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 5%;
+}
+
+#umsatzLowerInner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+}
+
+#dottedItem {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.cost-section {
+    display: flex;
+    flex-direction: column;
+    height: 420px;
+    padding: 20px;
+}
+
+.cost-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.cost-header h2 {
+    margin: 0;
+    font-size: 28px;
+}
+
+.cost-labels {
+    display: grid;
+    grid-template-columns: 1fr 1fr 50px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.cost-list {
+    flex: 1;
+    overflow-y: auto;
+    min-height: 0;
+}
+
+.cost-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 50px;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.cost-row input {
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    background: #ececec;
+}
+
+.addBtn,
+.removeBtn {
+    width: 35px;
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+    background: #dcdcdc;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.cost-divider {
+    height: 2px;
+    background: #7ca96f;
+    margin: 15px 0;
+    flex-shrink: 0;
+}
+
+.cost-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.sum-box {
+    min-width: 120px;
+    text-align: center;
+    padding: 10px;
+    background: #c8d9c0;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
 
 
 /* Fontsizes ascending */

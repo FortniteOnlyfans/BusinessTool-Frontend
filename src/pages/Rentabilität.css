@@ -1,0 +1,87 @@
+.rent-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.whiteBackground {
+    background-color: #ffffff;
+    border-radius: 40px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 30px;
+
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+}
+
+.rent-header {
+    margin-bottom: 20px;
+}
+
+.rent-header h2 {
+    margin: 0;
+    font-size: 22px;
+}
+
+.rent-table-header {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.entries-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.rent-row {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    align-items: center;
+}
+
+/* Label side */
+.rent-name {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.rent-input,
+.rent-output {
+    width: 100%;
+    height: 36px;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.rent-input {
+    border: none;
+    background: #f3f3f3;
+    padding: 0 12px;
+}
+
+.rent-input:focus {
+    outline: 2px solid #d4b14a;
+}
+
+.rent-output {
+    background: #e7ddbb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rent-container,
+.whiteBackground,
+.entries-container {
+    overflow: visible;
+}
