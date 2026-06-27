@@ -37,16 +37,16 @@ export default function Login() {
             <div className="auth-header">
                 <img src="src/images/logo.png" alt="logo" />
             </div>
-            <div className="login-container">
-                <div className="login-card">
-                    <div className="login-left">
+            <div className="auth-container">
+                <div className="auth-card">
+                    <div className="auth-left">
 
                         <p id="heading">Anmeldung</p>
 
                         <p id="text">Willkommen zurück!</p>
 
                         <form
-                            className="login-form"
+                            className="auth-form"
                             onSubmit={handleLogin}
                         >
                             <input
@@ -71,7 +71,7 @@ export default function Login() {
                             <span id="rainbow-text">Registrieren</span>
                         </p>
                     </div>
-                    <div className="login-image">
+                    <div className="auth-image">
                         <img
                             src="src/images/authImage.png"
                             alt="aesthetic"/>
