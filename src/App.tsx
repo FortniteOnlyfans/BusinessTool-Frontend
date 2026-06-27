@@ -5,6 +5,7 @@ import {useEffect, useState} from "react";
 import {initStates} from "./menu/PageManager.tsx";
 import {setPage} from "./menu/PageManager.tsx";
 import Privat from "./pages/privatentnahmen.tsx";
+import Rent from "./pages/Rentabilität.tsx";
 
 function App() {
     const [upperColor, setUpperColor] = useState("#e7d2d8");
@@ -20,7 +21,7 @@ function App() {
             <PageHeader color={lowerColor} name={name} setPage={p => setPage(p)} />
             <PageBackground lowerColor={lowerColor} upperColor={upperColor} >
                 <GreyBackground>
-                   <Privat color={lowerColor}/>
+                   <Rent color={lowerColor}/>
                 </GreyBackground>
             </PageBackground>
         </>
