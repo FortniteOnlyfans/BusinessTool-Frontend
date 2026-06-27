@@ -3,7 +3,7 @@ import * as React from "react";
 import Menu from "./menu/Menu.tsx";
 import {PROJ_STATE} from "./menu/PageManager.tsx";
 import type {Project, ProjectVersion} from "./menu/PageManager.tsx";
-import {useEffect, useState} from "react";
+import {InputHTMLAttributes, SelectHTMLAttributes, useEffect, useState} from "react";
 
 export function PageBackground({upperColor, lowerColor, children}) {
     return (
@@ -38,7 +38,7 @@ export function PageHeader({ color, name, setPage }) {
 
             <div className="header-meta">
                 <p>{project.name}</p>
-                <p>{new Date(version.erstellt).toDateString()}</p>
+                <p>{new Date(version ? version.erstellt : "").toDateString()}</p>
             </div>
 
             <div className="header-title">
@@ -81,13 +81,33 @@ export function InputHighlight({color}) {
     )
 }
 
-export function InputNormal() {
+export function InputNormal({ className, ...props }: InputHTMLAttributes<any>) {
     return (
         <input
-            className="inputNormal"
+            // 3. Spread the props onto the native element
+            {...props}
+            // Merging classNames cleanly so your default style isn't completely overwritten
+            className={`inputNormal ${className || ""}`}
             min={0}
-        ></input>
-    )
+        />
+    );
+}
+
+interface InputLabelledProps extends InputHTMLAttributes<HTMLInputElement> {
+    label: string;
+}
+
+export function InputLabelled({ label, className, ...props }: InputLabelledProps) {
+    return (
+        <div className="input-labelled-container">
+            <label>{label}</label>
+            <input
+                {...props}
+                className={`inputNormal ${className || ""}`}
+                min={0}
+            />
+        </div>
+    );
 }
 
 export function SumHighlight({color, children}) {
@@ -144,4 +164,47 @@ export function Info({color}) {
             </label>
         </div>
     )
+}
+
+interface ComboBoxOption {
+    value: string | number;
+    label: string;
+}
+
+export function comboboxOptions(text: string[]): ComboBoxOption[] {
+    const arr = new Array<ComboBoxOption>(text.length);
+    for (let i = 0; i < text.length; i++){
+        const t = text[i];
+        arr[i] = {
+            value: t,
+            label: t
+        };
+    }
+    return arr;
+}
+
+interface ComboBoxProps extends SelectHTMLAttributes<HTMLSelectElement> {
+    label?: string;
+    options: ComboBoxOption[];
+}
+
+export function ComboBox({ label, options, className, ...props }: ComboBoxProps) {
+    return (
+        <div className="combobox-container" style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+            {label && <label>{label}</label>}
+
+            <select
+                {...props}
+                className={`selectNormal ${className || ""}`}
+                style={{ padding: '8px', borderRadius: '4px', border: '1px solid #ccc', ...props.style }}
+            >
+                {/* Render the dynamic list of options */}
+                {options.map((option) => (
+                    <option key={option.value} value={option.value}>
+                        {option.label}
+                    </option>
+                ))}
+            </select>
+        </div>
+    );
 }

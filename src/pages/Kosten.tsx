@@ -8,7 +8,7 @@ import {
 import Menu from "../menu/Menu.tsx";
 import {useState} from "react";
 
-type CostEntry = {
+export type CostEntry = {
     id: number;
     name: string;
     amount: number;

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./Auth.css"
+import {LOGIN, POST} from "../backend/Backend.tsx";
 
 export default function Login() {
     const [username, setUsername] = useState("");
@@ -9,21 +10,14 @@ export default function Login() {
         e.preventDefault();
 
         try {
-            const response = await fetch("http://localhost:4100/login", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify({
-                    username: username,
-                    password: password,
-                }),
+            const data= await POST("/login", {
+                username: username,
+                password: password,
             });
 
-            const data = await response.json();
-
-            if (data.status !== "success") {
-                alert(data.message);
+            if (data.status === "success") {
+                const tkn = data.headers.authorization;
+                LOGIN(tkn);
             }
 
         } catch (error) {

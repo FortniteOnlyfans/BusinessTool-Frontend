@@ -3,10 +3,15 @@ import Cookies from "js-cookie";
 const SERVER = "http://localhost:4100";
 const COOKIE = "fnof_token";
 
+export interface Headers {
+    authorization?: string
+}
+
 export interface Response {
     status: string,
     reason?: string,
-    payload?: object
+    payload?: object,
+    headers?: Headers
 }
 
 function prepareRequest(req: XMLHttpRequest, data: object, url: string): Promise<Response> {
@@ -27,7 +32,11 @@ function prepareRequest(req: XMLHttpRequest, data: object, url: string): Promise
                     if (maybeToken) {
                         Cookies.set(COOKIE, maybeToken);
                     }
-                    res(JSON.parse(req.responseText));
+                    let d = JSON.parse(req.responseText);
+                    d.headers = {
+                        authorization: req.getResponseHeader("Authorization")
+                    };
+                    res(d);
                 } else {
                     rej({status: "failed", reason: "Server returned: " + req.status});
                 }

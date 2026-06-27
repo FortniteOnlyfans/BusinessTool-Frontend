@@ -1,4 +1,3 @@
-import Ums from "../pages/Ums.tsx";
 import Liq from "../pages/Liq.tsx";
 import NewProj from "../exec/NewProj.tsx";
 import DelProj from "../exec/DelProj.tsx";
@@ -6,6 +5,8 @@ import OpenProj from "../exec/OpenProj.tsx";
 import OpenProjVersion from "../exec/OpenProjVer.tsx";
 import Kosten from "../pages/Kosten.tsx";
 import Umsatz from "../pages/Umsatz.tsx";
+import Logout from "../exec/Logout.tsx";
+import NewProjVer from "../exec/NewProjVer.tsx";
 
 export const pageData = {
     dash: {
@@ -54,7 +55,8 @@ export const pageData = {
     },
 
     neuver: {
-        name: "Neue Projektversion"
+        name: "Neue Projektversion",
+        exec: NewProjVer
     },
 
     openver: {
