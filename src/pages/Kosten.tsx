@@ -20,7 +20,7 @@ type CostSectionProps = {
     setEntries: React.Dispatch<React.SetStateAction<CostEntry[]>>;
 };
 
-function CostSection({
+export function CostSection({
                          title,
                          entries,
                          setEntries,
@@ -163,10 +163,6 @@ export default function Kosten() {
 
     return (
         <>
-            <PageHeader color={lowerColor} name={name} projectname={projectname} imgName={"src/images/Kosten.png"}>
-                <Menu color={lowerColor} setPage={"kost"}/>
-            </PageHeader>
-            <PageBackground lowerColor={lowerColor} upperColor={upperColor}>
                 <GreyBackground direction={"row"}>
 
                     <WhiteBackground>
@@ -194,7 +190,6 @@ export default function Kosten() {
                     </WhiteBackground>
 
                 </GreyBackground>
-            </PageBackground>
         </>
     );
 };

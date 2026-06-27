@@ -9,8 +9,8 @@ import {
     WhiteBackground
 } from "../components.tsx";
 import {GET} from "../backend/Backend.tsx";
-import {useEffect, useState} from "react";
-import {initStates} from "../menu/PageManager.tsx";
+import {useState} from "react";
+import {PROJ_STATE} from "../menu/PageManager.tsx";
 import Menu from "../menu/Menu.tsx";
 
 export default function Umsatz() {
@@ -20,32 +20,15 @@ export default function Umsatz() {
     const projectname = "Probeunternehmen"
 
 
-    useEffect(() => {
-        initStates(setUpperColor, setLowerColor, setName)
-    }, []);
 
     const [calc, setCalc] = useState(null);
-    const projectId = 1;
-    console.log("projectId raw:", projectId);
-    if (!projectId) {
-        console.error("projectId fehlt!");
-        return;
-    }
 
-    if (projectId) {
-        const result = GET(`/project/${projectId}/calc/latest`);
-
-            setCalc(result);
-    }
+    GET(`/project/${PROJ_STATE.currentId}/calc/latest`).then(data => setCalc(data))
 
 
 
     return (
         <>
-            <PageHeader color={lowerColor} name={name} projectname={projectname} imgName={"src/images/Umsatz.png"}>
-                <Menu color={lowerColor} setPage={"ums"}/>
-            </PageHeader>
-            <PageBackground lowerColor={lowerColor} upperColor={upperColor} >
                 <GreyBackground direction={"column"}>
                     <WhiteBackground>
                         <div id="umsatzUpper">
@@ -69,24 +52,23 @@ export default function Umsatz() {
                                 <div id="dottedItem"><Dot color={lowerColor}/>
                                     <label>Umsatz</label>
                                 </div>
-                                <SumNormal>{calc.umsatz} €</SumNormal>
+                                <SumNormal>{calc ? calc.umsatz : ""} €</SumNormal>
                             </div>
                             <div id="umsatzLowerInner">
                                 <div id="dottedItem"><Dot color={lowerColor}/>
                                     <label>Kosten</label>
                                 </div>
-                                <SumNormal>{calc.kosten} €</SumNormal>
+                                <SumNormal>{calc ? calc.kosten : ""} €</SumNormal>
                             </div>
                             <div id="umsatzLowerInner">
                                 <div id="dottedItem"><Dot color={lowerColor}/>
                                     <label>Rohgewinn</label>
                                 </div>
-                                <SumNormal>{calc.gewinn} €</SumNormal>
+                                <SumNormal>{calc ? calc.gewinn : ""} €</SumNormal>
                             </div>
                         </div>
                     </WhiteBackground>
                 </GreyBackground>
-            </PageBackground>
         </>
     )
 }
