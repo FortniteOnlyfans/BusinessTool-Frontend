@@ -19,12 +19,25 @@
     height: 77px;
 
     display: flex;
-    justify-content: center;
     align-items: center;
 
     background: #fff;
     color: var(--color);
     padding: 0 20px;
+}
+
+.header-meta {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.header-meta > p:first-child:after {
+    content: ' -';
+}
+
+.header-meta > p {
+    margin-inline: 2px;
 }
 
 .header-left {
@@ -45,13 +58,8 @@
 
     font-size: 40px;
     font-weight: 500;
-    display: flex;
-    flex-direction: row;
-    text-align: center;
-    justify-content: space-between;
-    height: 77px;
-    padding: 25px 20px;
-    margin: 0;
+
+    white-space: nowrap;
 }
 
 #navBtn {
@@ -309,6 +317,9 @@
     font-weight: bold;
 }
 
+.input-labelled-container {
+    display: flex;
+}
 
 
 /* Fontsizes ascending */

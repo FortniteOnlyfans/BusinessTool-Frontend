@@ -9,7 +9,7 @@ import {
     WhiteBackground
 } from "../components.tsx";
 import {GET} from "../backend/Backend.tsx";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import {PROJ_STATE} from "../menu/PageManager.tsx";
 import Menu from "../menu/Menu.tsx";
 
@@ -23,8 +23,9 @@ export default function Umsatz() {
 
     const [calc, setCalc] = useState(null);
 
-    GET(`/project/${PROJ_STATE.currentId}/calc/latest`).then(data => setCalc(data))
-
+    useEffect( () => {
+        GET(`/project/${PROJ_STATE.currentId}/calc/latest`).then(data => setCalc(data));
+    }, []);
 
 
     return (

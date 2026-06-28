@@ -5,6 +5,8 @@ import OpenProj from "../exec/OpenProj.tsx";
 import OpenProjVersion from "../exec/OpenProjVer.tsx";
 import Kosten from "../pages/Kosten.tsx";
 import Umsatz from "../pages/Umsatz.tsx";
+import Logout from "../exec/Logout.tsx";
+import NewProjVer from "../exec/NewProjVer.tsx";
 import Dashboard from "../pages/Dashboard.tsx";
 
 export const pageData = {
@@ -57,7 +59,8 @@ export const pageData = {
     },
 
     neuver: {
-        name: "Neue Projektversion"
+        name: "Neue Projektversion",
+        exec: NewProjVer
     },
 
     openver: {
@@ -78,5 +81,10 @@ export const pageData = {
     delproj: {
         name: "Lösche Projekt",
         exec: DelProj
+    },
+
+    logout: {
+        name: "Ablemden",
+        exec: Logout
     }
 }

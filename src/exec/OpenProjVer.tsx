@@ -1,8 +1,13 @@
-import { GET } from "../backend/Backend.tsx";
+import {GET} from "../backend/Backend.tsx";
 import HandleStatus from "./HandleStatus.tsx";
-import { requestString } from "../AppPopup.tsx";
 import {PROJ_STATE} from "../menu/PageManager.tsx";
+import type {ModalBlueprintProps} from "../Modal.tsx";
+import {openModal} from "../Modal.tsx";
 
+interface VersionMeta {
+    id: number;
+    details: any;
+}
 
 export default async function OpenProjVersion() {
     if (!PROJ_STATE.currentId) {
@@ -17,7 +22,7 @@ export default async function OpenProjVersion() {
         const versions: number[] = projRes.payload.versions || [];
 
         if (versions.length === 0) {
-            await requestString("No versions found for this project.");
+            alert("No versions found for this project.");
             return;
         }
 
@@ -31,10 +36,71 @@ export default async function OpenProjVersion() {
 
         const rawVersionsMeta = await Promise.all(versionDetailsPromises);
 
-        const selected = await requestString(
-            "Select a Version ID:\n" + JSON.stringify(rawVersionsMeta, null, 2)
-        );
+        const data = await openModal<OpenProjVersionData>(OpenProjVersionModal, {
+            versionsData: rawVersionsMeta
+        });
 
-        PROJ_STATE.currentVersionId = Number(selected);
+        PROJ_STATE.currentVersionId = data.selectedVersionId;
+        const v = (await GET(`/project/version/${data.selectedVersionId}/info`)).payload;
+        console.log(v);
+        PROJ_STATE.setCurrentVersion(v);
     }
 }
+
+// -------------------------------------------------------------
+
+// What the modal returns
+interface OpenProjVersionData {
+    selectedVersionId: number;
+}
+
+interface OpenProjVersionModalProps extends ModalBlueprintProps<OpenProjVersionData> {
+    versionsData: VersionMeta[];
+}
+
+export function OpenProjVersionModal({ resolve, versionsData }: OpenProjVersionModalProps) {
+    return (
+        <div>
+            <h3 style={{ marginTop: 0, marginBottom: '16px' }}>Version auswählen...</h3>
+
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', maxHeight: '400px', overflowY: 'auto' }}>
+                {versionsData.map((v) => {
+                    let displayString = `Version ID: ${v.id}`;
+
+                    if (v.details && typeof v.details === 'object' && typeof v.details.erstellt === 'number') {
+                        const date = new Date(v.details.erstellt);
+
+                        displayString = date.toLocaleString();
+                    } else if (typeof v.details === 'string') {
+                        displayString = v.details;
+                    }
+
+                    return (
+                        <button
+                            key={v.id}
+                            onClick={() => {
+                                resolve({ selectedVersionId: v.id });
+                            }}
+                            style={optionButtonStyle}
+                        >
+                            <div style={{ fontWeight: '500' }}>{displayString}</div>
+                            <div style={{ fontSize: '11px', color: '#777', marginTop: '2px' }}>
+                                ID: {v.id}
+                            </div>
+                        </button>
+                    );
+                })}
+            </div>
+        </div>
+    );
+}
+const optionButtonStyle: React.CSSProperties = {
+    padding: '12px',
+    textAlign: 'left',
+    background: '#f9f9f9',
+    border: '1px solid #e5e5e5',
+    borderRadius: '6px',
+    cursor: 'pointer',
+    transition: 'background 0.2s',
+    color: '#222'
+};

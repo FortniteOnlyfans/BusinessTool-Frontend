@@ -2,6 +2,7 @@ export const menuData = {
     $: [
         ["proj", "Projekte"],
         ["func", "Projektfunktionen"],
+        ["logout", "Abmelden"]
     ],
     func: [
         ["dash", "Dashboard"],

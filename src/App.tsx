@@ -3,15 +3,16 @@ import './components.tsx'
 import {GreyBackground, PageBackground, PageHeader} from "./components.tsx"
 import {CSSProperties, useEffect, useState} from "react";
 import {initStates, setPage} from "./menu/PageManager.tsx";
+import {GlobalModalContainer} from "./Modal.tsx";
 
 interface InnerProps {
     color: CSSProperties
 }
 
 function App() {
-    const [upperColor, setUpperColor] = useState("#525252");
-    const [lowerColor, setLowerColor] = useState("#525252");
-    const [name, setName] = useState("Dashboard");
+    const [upperColor, setUpperColor] = useState("#e7d2d8");
+    const [lowerColor, setLowerColor] = useState("#bf3f60");
+    const [name, setName] = useState("Umsatz");
     const [Inner, setInner] = useState<React.ComponentType<InnerProps> | null>(null);
 
     useEffect(() => {
@@ -22,10 +23,11 @@ function App() {
         <>
             <PageHeader color={lowerColor} name={name} setPage={p => setPage(p)}/>
             <PageBackground lowerColor={lowerColor} upperColor={upperColor}>
-                <GreyBackground direction={"column"}>
+                <GreyBackground>
                     {Inner ? <Inner color={lowerColor}/> : <div/>}
                 </GreyBackground>
             </PageBackground>
+            <GlobalModalContainer/>
         </>
     )
 }
