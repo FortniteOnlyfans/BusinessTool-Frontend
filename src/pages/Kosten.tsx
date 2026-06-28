@@ -193,6 +193,7 @@ export default function Kosten({pid, color}) {
                             setEntries={setPersonnelCosts}
                         />
                     </WhiteBackground>
+                </GreyBackground>
         </>
     );
-};
+}

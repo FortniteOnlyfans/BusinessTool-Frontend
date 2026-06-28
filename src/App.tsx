@@ -30,7 +30,6 @@ export default function App() {
         <>
             <PageHeader color={lowerColor} name={name} setPage={(p) => setPage(p)} />
             <PageBackground lowerColor={lowerColor} upperColor={upperColor}>
-                <GreyBackground>
                     {Object.entries(pageData).map(([id, pageObj]) => {
                         if (!pageObj.page) return null;
                         const PageComponent = pageObj.page;
@@ -39,16 +38,18 @@ export default function App() {
                             <div
                                 key={id}
                                 style={{
-                                    display: activeId === id ? "block" : "none",
+                                    display: activeId === id ? "flex" : "none",
                                     width: "100%",
-                                    height: "100%"
+                                    height: "100%",
+                                    "flex-direction": "column",
+                                    "justify-content": "center",
+                                    "align-items": "center",
                                 }}
                             >
                                 <PageComponent color={lowerColor} pid={id} />
                             </div>
                         );
                     })}
-                </GreyBackground>
             </PageBackground>
             <GlobalModalContainer />
         </>
