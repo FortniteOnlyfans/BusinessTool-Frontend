@@ -1,7 +1,7 @@
 import {GET} from "../backend/Backend.tsx";
 import HandleStatus from "./HandleStatus.tsx";
 import type {Project} from "../menu/PageManager.tsx";
-import {PROJ_STATE} from "../menu/PageManager.tsx";
+import {loadPages, PROJ_STATE} from "../menu/PageManager.tsx";
 import {openModal} from "../Modal.tsx";
 import type {ModalBlueprintProps} from "../Modal.tsx";
 import {useEffect, useState} from "react";

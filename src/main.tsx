@@ -2,7 +2,7 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.tsx'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import {createBrowserRouter, createHashRouter, RouterProvider} from 'react-router-dom'
 import Login from "./Auth/Login.tsx";
 import Register from "./Auth/Register.tsx";
 

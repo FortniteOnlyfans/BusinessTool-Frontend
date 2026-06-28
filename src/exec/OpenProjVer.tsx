@@ -1,6 +1,6 @@
 import {GET} from "../backend/Backend.tsx";
 import HandleStatus from "./HandleStatus.tsx";
-import {PROJ_STATE} from "../menu/PageManager.tsx";
+import {loadPages, PROJ_STATE} from "../menu/PageManager.tsx";
 import type {ModalBlueprintProps} from "../Modal.tsx";
 import {openModal} from "../Modal.tsx";
 
@@ -44,6 +44,7 @@ export default async function OpenProjVersion() {
         const v = (await GET(`/project/version/${data.selectedVersionId}/info`)).payload;
         console.log(v);
         PROJ_STATE.setCurrentVersion(v);
+        loadPages();
     }
 }
 

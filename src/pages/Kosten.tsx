@@ -6,7 +6,10 @@ import {
     WhiteBackground
 } from "../components.tsx";
 import Menu from "../menu/Menu.tsx";
-import {useState} from "react";
+import {useEffect, useState} from "react";
+import type {InnerProps} from "../App.tsx";
+import type {ProjectVersion} from "../menu/PageManager.tsx";
+import {pageHookRegistry} from "../menu/PageManager.tsx";
 
 export type CostEntry = {
     id: number;
@@ -150,21 +153,25 @@ export function CostSection({
 }
 
 
-export default function Kosten() {
-    const upperColor = "#e5eae3"
-    const lowerColor = "#a6c59d"
-    const name = "Kosten"
-    const projectname = "Probeunternehmen"
-
+export default function Kosten({pid, color}) {
     const [personnelCosts, setPersonnelCosts] = useState<CostEntry[]>([]);
     const [operatingCosts, setOperatingCosts] = useState<CostEntry[]>([]);
     const [directCosts, setDirectCosts] = useState<CostEntry[]>([]);
 
+    useEffect(() => {
+        pageHookRegistry[pid] = {
+            save: function (pv: ProjectVersion) {
+
+            },
+            load: function (pv: ProjectVersion) {
+
+            }
+        };
+    }, []);
 
     return (
         <>
                 <GreyBackground direction={"row"}>
-
                     <WhiteBackground>
                         <CostSection
                             title="Direkte Kosten"

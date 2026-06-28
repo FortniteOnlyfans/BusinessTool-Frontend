@@ -1,7 +1,7 @@
 import "./App.css"
 import * as React from "react";
 import Menu from "./menu/Menu.tsx";
-import {PROJ_STATE} from "./menu/PageManager.tsx";
+import {PROJ_STATE, savePages} from "./menu/PageManager.tsx";
 import type {Project, ProjectVersion} from "./menu/PageManager.tsx";
 import {InputHTMLAttributes, SelectHTMLAttributes, useEffect, useState} from "react";
 
@@ -46,7 +46,7 @@ export function PageHeader({ color, name, setPage }) {
             </div>
 
             <div className="header-right">
-                <button>Right</button>
+                <button onClick={() => savePages()}>Save</button>
             </div>
         </div>
     );
