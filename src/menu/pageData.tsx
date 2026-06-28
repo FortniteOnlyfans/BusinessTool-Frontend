@@ -8,6 +8,9 @@ import Umsatz from "../pages/Umsatz.tsx";
 import Logout from "../exec/Logout.tsx";
 import NewProjVer from "../exec/NewProjVer.tsx";
 import Dashboard from "../pages/Dashboard.tsx";
+import Kapital from "../pages/Kapitalbedarf.tsx";
+import Rent from "../pages/Rentabilität.tsx";
+import Privat from "../pages/privatentnahmen.tsx";
 
 export const pageData = {
     dash: {
@@ -24,6 +27,13 @@ export const pageData = {
         page: Kosten
     },
 
+    priv: {
+        lowerColor: "#8ac3df",
+        upperColor: "#e0e9ee",
+        name: "Privatentnahmen",
+        page: Privat
+    },
+
     ums: {
         lowerColor: "#bf3f60",
         upperColor: "#e7d2d8",
@@ -34,7 +44,8 @@ export const pageData = {
     kapfin: {
         lowerColor: "#e9a77e",
         upperColor: "#f4e3da",
-        name: "Kapitalbedarf & Finanzierung"
+        name: "Kapitalbedarf & Finanzierung",
+        page: Kapital
     },
 
     liq: {
@@ -47,7 +58,8 @@ export const pageData = {
     rent: {
         lowerColor: "#dbc487",
         upperColor: "#eae3d1",
-        name: "Rentabilität"
+        name: "Rentabilität",
+        page: Rent
     },
 
     vergl: {

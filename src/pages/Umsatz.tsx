@@ -3,21 +3,15 @@ import "../components.tsx"
 import {
     Dot,
     GreyBackground,
-    InputNormal,
-    PageBackground,
-    PageHeader, SumNormal,
+    InputNormal, SumNormal,
     WhiteBackground
 } from "../components.tsx";
 import {GET} from "../backend/Backend.tsx";
 import {useEffect, useState} from "react";
 import {PROJ_STATE} from "../menu/PageManager.tsx";
-import Menu from "../menu/Menu.tsx";
 
 export default function Umsatz() {
-    const [upperColor, setUpperColor] = useState("#e7d2d8");
     const [lowerColor, setLowerColor] = useState("#bf3f60");
-    const [name, setName] = useState("Umsatz");
-    const projectname = "Probeunternehmen"
 
 
 

@@ -1,5 +1,7 @@
 import { useState } from "react";
 import "./Auth.css"
+import { POST} from "../backend/Backend.tsx";
+import HandleStatus from "../exec/HandleStatus.tsx";
 
 export default function Register() {
 
@@ -10,45 +12,25 @@ export default function Register() {
     async function handleRegister(e) {
         e.preventDefault();
 
+
+
         if (password === passwordConfirm) {
             try {
-                const response = await fetch(
-                    "http://localhost:4100/register",
-                    {
-                        method: "POST",
-                        headers: {
-                            "Content-Type": "application/json"
-                        },
-                        body: JSON.stringify({
-                            username: username,
-                            password: password
-                        })
-                    }
-                );
+                const data= await POST("/register", {
+                    username: username,
+                    password: password,
+                });
+                HandleStatus(data, false);
 
-                const data = await response.json();
-
-
-                if (data.success) {
-
-                    alert("Registrierung erfolgreich");
-
-                    setUsername("");
-                    setPassword("");
-
-                } else {
-
-                    alert(data.message || "Fehler");
-
+                if (data.status === "success") {
+                    window.location.href = "/login";
                 }
 
             } catch (error) {
-
                 console.error(error);
-
-                alert("Backend nicht erreichbar");
-
+                alert("Serverfehler");
             }
+
         }else {
             alert("Passwörter stimmen nicht überein!");
             setPassword("");
@@ -104,7 +86,7 @@ export default function Register() {
                             </button>
                         </form>
                         <p>Sie haben bereits ein Konto?
-                            <span id="rainbow-text">Anmelden</span>
+                            <a href={"/login"}><span id="rainbow-text">Anmelden</span></a>
                         </p>
                     </div>
                     <div className="auth-image">

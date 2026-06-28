@@ -15,7 +15,7 @@
 .pageHeader {
     position: relative;
 
-    width: 100%;
+    width: 97%;
     height: 77px;
 
     display: flex;
@@ -23,12 +23,13 @@
 
     background: #fff;
     color: var(--color);
-    padding: 0 20px;
+    padding: 0 1.5%;
 }
 
 .header-meta {
     display: flex;
     flex-direction: row;
+    padding-left: 30px;
 
 }
 
@@ -38,6 +39,8 @@
 
 .header-meta > p {
     margin-inline: 2px;
+    font-size: 18px;
+    color: #525252;
 }
 
 .header-left {

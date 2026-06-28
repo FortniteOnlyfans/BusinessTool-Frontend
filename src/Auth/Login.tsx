@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./Auth.css"
 import {LOGIN, POST} from "../backend/Backend.tsx";
+import HandleStatus from "../exec/HandleStatus.tsx";
 
 export default function Login() {
     const [username, setUsername] = useState("");
@@ -14,6 +15,7 @@ export default function Login() {
                 username: username,
                 password: password,
             });
+            HandleStatus(data, false);
 
             if (data.status === "success") {
                 const tkn = data.headers.authorization;
@@ -62,7 +64,7 @@ export default function Login() {
                             </button>
                         </form>
                         <p>Noch kein Konto?
-                            <span id="rainbow-text">Registrieren</span>
+                            <a href={"/register"}><span id="rainbow-text">Registrieren</span></a>
                         </p>
                     </div>
                     <div className="auth-image">
