@@ -7,6 +7,7 @@ export const menuData = {
     func: [
         ["dash", "Dashboard"],
         ["kost", "Kosten"],
+        ["priv", "Privatentnahmen"],
         ["ums", "Umsatz"],
         ["kapfin", "Kapitalbedarf & Finanzierung"],
         ["liq", "Liquidität"],

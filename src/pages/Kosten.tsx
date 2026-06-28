@@ -1,8 +1,6 @@
 import "../App.css"
 import {
     GreyBackground,
-    PageBackground,
-    PageHeader,
     WhiteBackground
 } from "../components.tsx";
 import Menu from "../menu/Menu.tsx";
@@ -195,8 +193,6 @@ export default function Kosten({pid, color}) {
                             setEntries={setPersonnelCosts}
                         />
                     </WhiteBackground>
-
-                </GreyBackground>
         </>
     );
 };
