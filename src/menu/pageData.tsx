@@ -15,7 +15,7 @@ import Privat from "../pages/privatentnahmen.tsx";
 export const pageData = {
     dash: {
         lowerColor: "#525252",
-        upperColor: "#525252",
+        upperColor: "#ededed",
         name: "Dashboard",
         page: Dashboard
     },

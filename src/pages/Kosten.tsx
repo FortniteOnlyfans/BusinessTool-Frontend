@@ -1,11 +1,8 @@
 import "../App.css"
 import {
     GreyBackground,
-    PageBackground,
-    PageHeader,
     WhiteBackground
 } from "../components.tsx";
-import Menu from "../menu/Menu.tsx";
 import {useState} from "react";
 
 export type CostEntry = {
@@ -163,8 +160,6 @@ export default function Kosten() {
 
     return (
         <>
-                <GreyBackground direction={"row"}>
-
                     <WhiteBackground>
                         <CostSection
                             title="Direkte Kosten"
@@ -188,8 +183,6 @@ export default function Kosten() {
                             setEntries={setPersonnelCosts}
                         />
                     </WhiteBackground>
-
-                </GreyBackground>
         </>
     );
 };

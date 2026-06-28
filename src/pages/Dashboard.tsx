@@ -45,7 +45,6 @@ export default function Dashboard() {
 
     return (
         <>
-            <div className="dashboard-background">
                 <div id="greyBoard">
                     <GreyBackground direction={"row"}>
                         <WhiteBackground>
@@ -80,7 +79,6 @@ export default function Dashboard() {
                         </WhiteBackground>
                     </GreyBackground>
                 </div>
-            </div>
         </>
     )
 }
