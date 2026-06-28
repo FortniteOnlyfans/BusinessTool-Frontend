@@ -1,5 +1,5 @@
 import "./privatentnahmen.css";
-import { Dot, Info, WhiteBackground } from "../components.tsx";
+import {Dot, GreyBackground, Info, WhiteBackground} from "../components.tsx";
 import { useState } from "react";
 
 type Entry = {
@@ -59,6 +59,7 @@ export default function Privat({ color }) {
     );
 
     return (
+        <GreyBackground direction={"column"}>
         <div className="privat-container">
             <WhiteBackground>
                 <div className="privat-header">
@@ -157,5 +158,6 @@ export default function Privat({ color }) {
                 </div>
             </WhiteBackground>
         </div>
+        </GreyBackground>
     );
 }

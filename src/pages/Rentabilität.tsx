@@ -1,6 +1,6 @@
 import "./Rentabilität.css";
 import { useState } from "react";
-import { WhiteBackground, Dot } from "../components";
+import {WhiteBackground, Dot, GreyBackground} from "../components";
 
 type Props = {
     color: string;
@@ -47,6 +47,7 @@ export default function Rent({ color }: Props) {
         betriebsergebnis - zinsen;
 
     return (
+        <GreyBackground direction={"column"}>
         <div className="rent-container">
             <WhiteBackground>
                 <div className="rent-header">
@@ -189,5 +190,6 @@ export default function Rent({ color }: Props) {
                 </div>
             </WhiteBackground>
         </div>
+        </GreyBackground>
     );
 }

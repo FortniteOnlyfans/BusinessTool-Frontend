@@ -1,5 +1,5 @@
 import "./Kapitalbedarf.css";
-import { Dot, Info, WhiteBackground } from "../components";
+import {Dot, GreyBackground, Info, WhiteBackground} from "../components";
 import { useState } from "react";
 
 type Entry = {
@@ -179,6 +179,7 @@ export default function Kapital({ color }) {
     const format = (value: number) =>
         `${value.toLocaleString("de-DE")} €`;
     return (
+        <GreyBackground direction={"column"}>
         <div className="kapital-container">
 
             <WhiteBackground>
@@ -424,5 +425,6 @@ export default function Kapital({ color }) {
             </WhiteBackground>
 
         </div>
+        </GreyBackground>
     );
 }

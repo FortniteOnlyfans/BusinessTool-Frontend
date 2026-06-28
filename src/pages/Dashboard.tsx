@@ -45,7 +45,7 @@ export default function Dashboard() {
 
     return (
         <>
-                <div id="greyBoard">
+            <GreyBackground direction={"column"}>
                     <GreyBackground direction={"row"}>
                         <WhiteBackground>
                             <p id="liq">LIQUIDITÄT</p>
@@ -78,7 +78,7 @@ export default function Dashboard() {
                             <p id="kap">KAPITALBEDARF & FINANZIERUNG</p>
                         </WhiteBackground>
                     </GreyBackground>
-                </div>
+            </GreyBackground>
         </>
     )
 }
