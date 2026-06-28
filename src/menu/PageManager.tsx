@@ -1,4 +1,6 @@
 import { pageData } from "./pageData.tsx";
+import {POST} from "../backend/Backend.tsx";
+import HandleStatus from "../exec/HandleStatus.tsx";
 
 export interface Geld {
     name?: string;
@@ -84,7 +86,7 @@ export function setPage(pageId: string) {
     }
 }
 
-export function savePages() {
+export async function savePages() {
     const pv = PROJ_STATE.currentVersion;
     for (const id in pageData) {
         const d = pageData[id];
@@ -96,15 +98,20 @@ export function savePages() {
         }
     }
     console.log("Global ProjectVersion saved layout:", PROJ_STATE.currentVersion);
+    const res = await POST(`/project/version/${PROJ_STATE.currentVersionId}/save`, PROJ_STATE.currentVersion);
+    HandleStatus(res);
 }
 
-export function loadPages() {
-    const pv = PROJ_STATE.currentVersion;
+export function loadPages(pv = PROJ_STATE.currentVersion) {
+    console.log("load pages: " + JSON.stringify(pv));
     for (const id in pageData) {
         const d = pageData[id];
+        console.log(id + ": " + d);
         if (d.page) {
+            console.log("inner")
             const hooks = pageHookRegistry[id];
             if (hooks && hooks.load) {
+                console.log("hook")
                 hooks.load(pv);
             }
         }

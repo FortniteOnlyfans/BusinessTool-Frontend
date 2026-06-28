@@ -37,7 +37,7 @@ export function PageHeader({ color, name, setPage }) {
             </div>
 
             <div className="header-meta">
-                <p>{project.name}</p>
+                <p>{project ? project.name : ""}</p>
                 <p>{new Date(version ? version.erstellt : "").toDateString()}</p>
             </div>
 
