@@ -6,6 +6,7 @@ import {initStates} from "./menu/PageManager.tsx";
 import {setPage} from "./menu/PageManager.tsx";
 import Privat from "./pages/privatentnahmen.tsx";
 import Rent from "./pages/Rentabilität.tsx";
+import Kapital from "./pages/Kapitalbedarf.tsx";
 
 function App() {
     const [upperColor, setUpperColor] = useState("#e7d2d8");
@@ -21,7 +22,7 @@ function App() {
             <PageHeader color={lowerColor} name={name} setPage={p => setPage(p)} />
             <PageBackground lowerColor={lowerColor} upperColor={upperColor} >
                 <GreyBackground>
-                   <Rent color={lowerColor}/>
+                   <Kapital color={lowerColor}/>
                 </GreyBackground>
             </PageBackground>
         </>
