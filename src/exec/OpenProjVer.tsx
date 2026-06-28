@@ -44,7 +44,7 @@ export default async function OpenProjVersion() {
         const v = (await GET(`/project/version/${data.selectedVersionId}/info`)).payload;
         console.log(v);
         PROJ_STATE.setCurrentVersion(v);
-        loadPages();
+        loadPages(v);
     }
 }
 
